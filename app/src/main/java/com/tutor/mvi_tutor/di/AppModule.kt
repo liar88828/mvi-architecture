@@ -4,20 +4,14 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
-
-interface MyRepository {
-
-}
 
 @Module
-@InstallIn(
-	SingletonComponent::class
-)
-class AppModule {
+@InstallIn(SingletonComponent::class)
+object AnalyticsModule {
 	@Provides
-	@Singleton
-	fun provideMyRepository(): MyRepository {
+	fun repositoryProvider(): MyRepository {
 		return MyRepositoryImpl()
+
 	}
+
 }

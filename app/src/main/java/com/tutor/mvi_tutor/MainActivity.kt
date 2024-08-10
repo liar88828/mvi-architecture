@@ -21,8 +21,8 @@ class MainActivity : ComponentActivity() {
 		setContent {
 			MVIpatternTheme {
 				Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-					Text("Hello World")
-//					OnBoarding(modifier = Modifier.padding(innerPadding))
+//					Text("Hello World")
+					OnBoarding(modifier = Modifier.padding(innerPadding))
 				}
 			}
 		}
