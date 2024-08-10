@@ -9,14 +9,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.tutor.mvi_tutor.R
 
-val FontItim = FontFamily(
+val fontItim = FontFamily(
 	Font(R.font.itim, FontWeight.Normal, FontStyle.Normal),
 	)
 
 // Set of Material typography styles to start with
 val Typography = Typography(
 	bodyLarge = TextStyle(
-		fontFamily = FontItim,
+		fontFamily = fontItim,
 		fontWeight = FontWeight.Normal,
 		fontSize = 16.sp,
 		lineHeight = 24.sp,

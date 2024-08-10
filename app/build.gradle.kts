@@ -74,7 +74,8 @@ dependencies {
 	// Coil
 	implementation("io.coil-kt:coil-compose:2.6.0")
 	implementation ("androidx.navigation:navigation-compose:2.7.7")
-	//Paging3
+	//constrain layout
+	implementation (libs.androidx.constraintlayout.compose)
 
 }
 kapt {

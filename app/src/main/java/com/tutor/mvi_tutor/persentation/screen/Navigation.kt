@@ -1,10 +1,13 @@
 package com.tutor.mvi_tutor.persentation.screen
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.tutor.mvi_tutor.persentation.viewmodel.HomeViewModel
 
 object Navigation {
 	val splashScreen = "SplashScreen"
@@ -16,13 +19,17 @@ object Navigation {
 }
 
 @Composable
-fun OnBoarding(modifier: Modifier) {
+fun OnBoarding(
+	viewModel: HomeViewModel,
+	modifier: Modifier,
+
+	) {
 	val navController = rememberNavController()
 
 	NavHost(
 		navController = navController,
 		startDestination = Navigation.splashScreen,
-		modifier=modifier
+		modifier = modifier
 	) {
 		composable(
 			route = Navigation.splashScreen
@@ -32,7 +39,12 @@ fun OnBoarding(modifier: Modifier) {
 		composable(
 			route = Navigation.homeScreen
 		) {
-			HomeScreen(navController)
+			val homeState by viewModel.homeState.collectAsState()
+			HomeScreen(
+				navController,
+				homeState = homeState,
+
+			)
 		}
 	}
 
