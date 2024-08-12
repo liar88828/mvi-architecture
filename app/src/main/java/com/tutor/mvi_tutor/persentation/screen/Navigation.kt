@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.tutor.mvi_tutor.persentation.screen.home.HomeScreen
 import com.tutor.mvi_tutor.persentation.viewmodel.HomeViewModel
 
 object Navigation {
@@ -43,6 +44,7 @@ fun OnBoarding(
 			HomeScreen(
 				navController,
 				homeState = homeState,
+				onEvent =  viewModel::homeEvent
 
 			)
 		}

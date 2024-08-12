@@ -4,7 +4,7 @@ import com.tutor.mvi_tutor.data.model.Tasks
 
 data class HomeState(
 	val loading: Boolean = false,
-	val showDialog: Boolean = false,
+	var onDialog: Boolean = false,
 	val openTaskDialog: Boolean = false,
 	val selectTask: Tasks? = null,
 	val tasks: MutableList<Tasks> = mutableListOf(),

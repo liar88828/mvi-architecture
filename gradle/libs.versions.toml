@@ -12,6 +12,7 @@ composeBom = "2024.04.01"
 navigationCompose = "2.7.6"
 
 [libraries]
+androidx-activity = { module = "androidx.activity:activity", version.ref = "activityCompose" }
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
